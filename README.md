@@ -1,6 +1,6 @@
 
 ## Personality Chat
-Personality Chat makes it easy to add small talk capabilities to your chatbot. Small talk/chit-chat makes bots more conversational and personable. This package has more than a 100 scenarios of small talk in the voice of three personas - professional, friendly, comical. Choose the persona that most closely resembles your chatbot's voice.
+Personality Chat makes it easy to add small talk capabilities to your chatbot. Small talk/chit-chat helps to make chatbots more conversational and personable. This package has more than a 100 scenarios of small talk in the voice of three personas - professional, friendly, humorous. Choose the persona that most closely resembles your chatbot's voice.
 
 |User query        |Professional​ |Friendly​ |Humorous​ |
 |---------|-----|------|------|
@@ -26,7 +26,7 @@ Personality Chat matches the user's small talk query with a small talk scenario.
 
 
 ### Throttling limits
-We enforce throttling limits on the Personality Chat API at the rate of 10 queries per minute. Throttling is done based on the IP address. 
+We enforce throttling limits on the Personality Chat API at the rate of 30 queries per minute. Throttling is done based on the IP address. 
 
 If you are throttled, the API returns a 429 HTTP response with the message *Rate limit is exceeded. Try again in X seconds.*
 

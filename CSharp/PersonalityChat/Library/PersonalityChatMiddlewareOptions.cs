@@ -41,7 +41,7 @@ namespace Microsoft.Bot.Builder.PersonalityChat
     /// </summary>
     public class PersonalityChatMiddlewareOptions : PersonalityChatOptions
     {
-        public PersonalityChatMiddlewareOptions(string subscriptionKey = "", PersonalityChatPersona botPersona = PersonalityChatPersona.Friendly, bool respondOnlyIfChat = false, float scoreThreshold = 0.3F, bool endActivityRoutingOnResponse = false, Dictionary<string, List<string>> scenarioResponsesMapping = null) : base(subscriptionKey, botPersona, scenarioResponsesMapping)
+        public PersonalityChatMiddlewareOptions(string subscriptionKey = "", PersonalityChatPersona botPersona = PersonalityChatPersona.Friendly, bool respondOnlyIfChat = true, float scoreThreshold = 0.3F, bool endActivityRoutingOnResponse = true, Dictionary<string, List<string>> scenarioResponsesMapping = null) : base(subscriptionKey, botPersona, scenarioResponsesMapping)
         {
             this.RespondOnlyIfChat = respondOnlyIfChat;
             this.ScoreThreshold = scoreThreshold;

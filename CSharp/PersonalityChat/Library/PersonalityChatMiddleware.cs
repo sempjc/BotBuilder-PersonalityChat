@@ -69,6 +69,12 @@ namespace Microsoft.Bot.Builder.PersonalityChat
                 }
             }
 
+            if (this.personalityChatMiddlewareOptions.EndActivityRoutingOnResponse)
+            {
+                // Query is answered, don't keep routing
+                return;
+            }
+
             await next().ConfigureAwait(false);
         }
 
@@ -99,12 +105,6 @@ namespace Microsoft.Bot.Builder.PersonalityChat
             if (!string.IsNullOrEmpty(personalityChatResponse))
             {
                 await context.SendActivity(personalityChatResponse).ConfigureAwait(false);
-
-                if (this.personalityChatMiddlewareOptions.EndActivityRoutingOnResponse)
-                {
-                    // Query is answered, don't keep routing
-                    return;
-                }
             }
         }
     }

@@ -31,6 +31,8 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+using Microsoft.Bot.Builder.PersonalityChat.Core;
+
 namespace Microsoft.Bot.Builder.PersonalityChat.Tests
 {
     using System.Threading.Tasks;
@@ -45,7 +47,9 @@ namespace Microsoft.Bot.Builder.PersonalityChat.Tests
         public async Task PersonalityChat_TestMiddleware()
         {
             TestAdapter adapter = new TestAdapter()
-                .Use(new PersonalityChatMiddleware(new PersonalityChatMiddlewareOptions()));
+                .Use(new PersonalityChatMiddleware(new PersonalityChatMiddlewareOptions(
+                    respondOnlyIfChat: false,
+                    endActivityRoutingOnResponse: false)));
 
             await new TestFlow(adapter, async (context) =>
             {
@@ -58,5 +62,73 @@ namespace Microsoft.Bot.Builder.PersonalityChat.Tests
                     .AssertReply("test response")
                 .StartTest();
         }
+
+        [TestMethod]
+        [TestCategory("PersonalityChatMiddleware")]
+        public async Task PersonalityChat_TestEndRouting_True()
+        {
+            TestAdapter adapter = new TestAdapter()
+                .Use(new PersonalityChatMiddleware(new PersonalityChatMiddlewareOptions(
+                    endActivityRoutingOnResponse: true)));
+
+            await new TestFlow(adapter, async (context) =>
+            {
+                await context.SendActivity(context.Activity.Text);
+            })
+                .Send("Hello")
+                .AssertReply("Hey. What's up?")
+                .StartTest();
+        }
+
+        [TestMethod]
+        [TestCategory("PersonalityChatMiddleware")]
+        public async Task PersonalityChat_TestEndRouting_False()
+        {
+            TestAdapter adapter = new TestAdapter()
+                .Use(new PersonalityChatMiddleware(
+                    new PersonalityChatMiddlewareOptions(
+                        endActivityRoutingOnResponse: false)));
+
+            await new TestFlow(adapter, async (context) =>
+            {
+                await context.SendActivity(context.Activity.Text);
+            })
+                .Send("Hello")
+                .AssertReply("Hey. What's up?")
+                .AssertReply("Hello")
+                .StartTest();
+        }
+
+        [TestMethod]
+        [TestCategory("PersonalityChatMiddleware")]
+        public async Task PersonalityChat_TestEndRouting_Switch_Persona()
+        {
+            TestAdapter adapter = new TestAdapter()
+                .Use(new PersonalityChatMiddleware(
+                    new PersonalityChatMiddlewareOptions(
+                        botPersona: PersonalityChatPersona.Professional)));
+
+            await new TestFlow(adapter, async (context) =>
+            {
+                await context.SendActivity(context.Activity.Text);
+            })
+                .Send("Hello")
+                .AssertReply("Hello. What can I do for you?")
+                .StartTest();
+
+            adapter = new TestAdapter()
+                .Use(new PersonalityChatMiddleware(
+                    new PersonalityChatMiddlewareOptions(
+                        botPersona: PersonalityChatPersona.Friendly)));
+
+            await new TestFlow(adapter, async (context) =>
+            {
+                await context.SendActivity(context.Activity.Text);
+            })
+                .Send("Hello")
+                .AssertReply("Hey. What's up?")
+                .StartTest();
+        }
+
     }
 }

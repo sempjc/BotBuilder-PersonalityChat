@@ -1,6 +1,5 @@
 ## Personality Chat Datasets
-The small talk datasets for the 100+ scenarios include responses and some sample queries. 
-Please note that the scenario matching models provided by the API has been developed using deep models trained on large number of editorial queries and grammars.
+The small talk datasets for the 100+ scenarios include responses and some sample queries
 
 |Dataset file      |Contents |
 |---------|-----|

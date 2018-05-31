@@ -1,5 +1,5 @@
 ## Personality Chat Datasets
-The small talk datasets for the 100+ scenarios include responses and some sample queries
+The small talk datasets for the 100+ scenarios include responses and some sample queries. 
 
 |Dataset file      |Contents |
 |---------|-----|

@@ -48,7 +48,7 @@ public PersonalityChatMiddlewareOptions(string subscriptionKey = "", Personality
 #### Customizing editorial response strings
 You will very likely want to override the response for questions around bot identity (such as *"Who are you?"*, *"Who made you?"*) to make them specific to your chatbot.
 
-The complete dataset mapping between small talk scenarios and responses is available at [Datasets](../Datasets/scenarioResponseMapping.txt). To edit any responses or remove existing ones, edit the file and pass it in as parameters to `PersonalityChatDialogOptions().`
+The complete dataset mapping between small talk scenarios and responses is available at [Datasets](../Datasets/). To edit any responses or remove existing ones, edit the file and pass it in as parameters to `PersonalityChatDialogOptions().`
 The customizations in this file are not additive so do not delete other default responses.
 
 ```csharp

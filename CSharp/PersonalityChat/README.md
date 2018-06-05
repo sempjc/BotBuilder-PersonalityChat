@@ -10,7 +10,7 @@ Example:
 	
 
 #### Simple Personality Chat bot
-[SimplePersonalityChatBot](SimplePersonalityChatBot) demonstrates a basic bot with chitchat capabilities that calls the PersonalityChat middleware. The middleware either returns a response if query is matched to a scenario or returns empty. 
+[SimplePersonalityChatBot](CSharp/PersonalityChat/Samples/SimplePersonalityChatBot) demonstrates a basic bot with chitchat capabilities that calls the PersonalityChat middleware. The middleware either returns a response if query is matched to a scenario or returns empty. 
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)

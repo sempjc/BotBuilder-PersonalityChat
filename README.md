@@ -16,7 +16,7 @@ Given a user query or message, Personality chat tries to match it with the close
 | | | |
 |-|-|-|
 | [Personality Chat in Microsoft Bot Framework SDK v3](CSharp/PersonalityChat-BotBuilderV3/README.md) |[Nuget package](https://www.nuget.org/packages/Microsoft.Bot.Builder.PersonalityChat/3.0.0-alpha-m1.0) | |
-| [Personality Chat in Microsoft Bot Framework SDK v4](CSharp/PersonalityChat/README.md) |[Nuget package](https://www.nuget.org/packages/Microsoft.Bot.Builder.PersonalityChat/4.0.0-alpha-m1.0) |[EndToEnd Sample](CSharp/EndToEndSamples/PersonalityChatWeatherBot) |
+| [Personality Chat in Microsoft Bot Framework SDK v4](CSharp/PersonalityChat/README.md) |[Nuget package](https://www.nuget.org/packages/Microsoft.Bot.Builder.PersonalityChat/4.0.0-alpha-m1.0) |[EndToEnd Sample](CSharp/EndToEndSamples/) |
 | [Calling Personality Chat API directly using core wrapper](CSharp/Core/README.md) |[Nuget package](https://www.nuget.org/packages/Microsoft.Bot.Builder.PersonalityChat.Core/1.0.0-alpha-m1.0) | |
 
 

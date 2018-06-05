@@ -10,7 +10,7 @@ Example:
 	
 
 #### Simple Personality Chat bot
-[SimplePersonalityChatBot](CSharp/PersonalityChat/Samples/SimplePersonalityChatBot) demonstrates a basic bot with chitchat capabilities that calls the PersonalityChat middleware. The middleware either returns a response if query is matched to a scenario or returns empty. 
+[SimplePersonalityChatBot](Samples/SimplePersonalityChatBot) demonstrates a basic bot with chitchat capabilities that calls the PersonalityChat middleware. The middleware either returns a response if query is matched to a scenario or returns empty. 
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -48,7 +48,7 @@ public PersonalityChatMiddlewareOptions(string subscriptionKey = "", Personality
 #### Customizing editorial response strings
 You will very likely want to override the response for questions around bot identity (such as *"Who are you?"*, *"Who made you?"*) to make them specific to your chatbot.
 
-The complete dataset mapping between small talk scenarios and responses is available at [Datasets](CSharp/Datasets/scenarioResponseMapping.txt). To edit any responses or remove existing ones, edit the file and pass it in as parameters to `PersonalityChatDialogOptions().`
+The complete dataset mapping between small talk scenarios and responses is available at [Datasets](../Datasets/). To edit any responses or remove existing ones, edit the file and pass it in as parameters to `PersonalityChatDialogOptions().`
 The customizations in this file are not additive so do not delete other default responses.
 
 ```csharp

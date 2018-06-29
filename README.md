@@ -2,6 +2,9 @@
 ## Personality Chat
 Personality Chat makes it easy to add small talk capabilities to your chatbot. Small talk/chit-chat helps to make chatbots more conversational and personable. This package has more than a 100 scenarios of small talk in the voice of three personas - professional, friendly, humorous. Choose the persona that most closely resembles your chatbot's voice.
 Given a user query or message, Personality chat tries to match it with the closest scenario using deep learnt similarity models and lexical features. Personality chat also provides editorialy curated responses for each scenario based on the selected persona.
+[See a quick tutorial and overview video here.](https://youtu.be/5C_uD8g2QKg )
+
+If interested in participating in a private preview or access to higher throttling limits, please contact personalitychat@microsoft.com.
 
 |User query        |Professional​ |Friendly​ |Humorous​ |
 |-|-|-|-|
@@ -35,7 +38,6 @@ Check out the [Editorial Scenarios and sample query for Personality Chat](Editor
 We enforce throttling limits on the Personality Chat API at the rate of 30 queries per minute. Throttling is done based on the IP address. 
 
 If you are throttled, the API returns a 429 HTTP response with the message *Rate limit is exceeded. Try again in X seconds.*
-
 
 ## Personality Chat - Beyond editorial content
 Personality Chat also includes a component that is capable of generating responses real-time *without* editorial content. It uses a Deep Neural Network to generate answers to a chitchat query. This is available as a demo playground chat in [Microsoft Cognitive Labs ](https://go.microsoft.com/fwlink/?linkid=872337&clcid=0x409) for a restricted set of query intents.

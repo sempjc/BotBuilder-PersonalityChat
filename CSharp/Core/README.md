@@ -12,6 +12,7 @@ Example:
 #### Console app calling Personality Chat API using Core Package
 Include the package [Microsoft.Bot.Builder.PersonalityChat.Core](https://www.nuget.org/packages/Microsoft.Bot.Builder.PersonalityChat.Core/1.0.0-alpha-m1.0)
 Initialize `PersonalityChatService` and choose a personality in whose voice the response should be returned. Options include `PersonalityChat.Professional`, `PersonalityChat.Friendly` or `PersonalityChat.Comical`. While intiializing, you can also use your Azure subscription key in the first argument of `PersonalitChatOptions`. If you do not have a key, you can use the free key provided in the snippet below. 
+
 Call the PersonalityChat API with `QueryServiceAsync`. It returns a response from the top matched scenario based on the confidence score. If there are multiple valid responses for a single scenario, a random one is chosen.
 
 ```csharp

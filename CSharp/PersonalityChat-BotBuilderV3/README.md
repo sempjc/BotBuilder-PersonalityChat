@@ -26,7 +26,7 @@ Example:
 ````
 
 PersonalityChatOptions has defaults which can be overridden.
-*  `subscriptionkey`: By deault this is set as empty. You can use your existing Azure subscription key, or use this free key: `1a517ea85ab54626b52d03658bd3ffdf`
+*  `subscriptionKey`: By deault this is set as empty. You can use your existing Azure subscription key, or use this free key: `1a517ea85ab54626b52d03658bd3ffdf`
 * `botPersona`: Set the personality of response. Choose between  *PersonalityChat.Professional*, *PersonalityChat.Friendly* and *PersonalityChat.Comical*
 * `respondOnlyIfChat`: Specify whether the in-built chat classifier should be used. Chat classifier adds a layer of filtering on input user queries to prevent responding to those that are not chitchat-related. For example, "*Is it cold tonight*"? is a fact-finding query that should not be treated as chitchat.
 * `scenarioThresholdScore`: Matched chitchat scenarios below this threshold will not be returned in the response body.
